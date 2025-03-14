@@ -5,6 +5,7 @@ function digitCount(num) {
   return 0
 }
 
+
 console.log(digitCount(20));
 console.log(digitCount(2));
 console.log(digitCount(15));
