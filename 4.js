@@ -1,15 +1,19 @@
 function digitCount(num) {
   if (num > 0 && num < 1000) {
-    return num % 10 < num ? 2 : (num % 100 < num ? 3 : 1)
+    let count = 0;
+    let n = num;
+    while (n !== 0) {
+      count++;
+      n = Math.floor(n / 10);
+    }
+    return count
   }
-  return 0
+  return "none"
 }
 
-
-console.log(digitCount(20));
-console.log(digitCount(2));
-console.log(digitCount(15));
-console.log(digitCount(1000));
-console.log(digitCount(0));
-console.log(digitCount(123));
+console.log(digitCount(1));
+console.log(digitCount(22));
+console.log(digitCount(99));
+console.log(digitCount(146));
 console.log(digitCount(999));
+
